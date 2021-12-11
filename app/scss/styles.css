@@ -106,7 +106,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  padding: 40px 10px;
+  padding: 40px 20px;
 }
 
 .overlaytext__nav {
@@ -494,7 +494,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 100px 10px;
+  padding: 100px 20px;
 }
 
 .designed__img {
