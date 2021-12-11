@@ -31,6 +31,7 @@ ul {
 button {
   height: 50px;
   width: 150px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 button:hover {
@@ -105,7 +106,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  padding: 40px 40px;
+  padding: 40px 20px;
 }
 
 .overlaytext__nav {
@@ -493,7 +494,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 100px 40px;
+  padding: 100px 20px;
 }
 
 .designed__img {
