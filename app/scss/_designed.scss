@@ -5,7 +5,6 @@
     align-items: center;
     text-align: center;
     padding: 100px 20px;
-    // background-color: yellowgreen;
 
     &__img {
         display: flex;
@@ -13,7 +12,7 @@
         align-items: center;
 
         &__image--mobile {
-            max-width: 125%;
+            max-width: 110%;
             height: auto;
             margin-bottom: 25px;
         }

@@ -510,7 +510,7 @@ header {
 }
 
 .designed__img__image--mobile {
-  max-width: 125%;
+  max-width: 110%;
   height: auto;
   margin-bottom: 25px;
 }
