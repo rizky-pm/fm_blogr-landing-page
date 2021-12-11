@@ -8,6 +8,16 @@
     // background-color: yellowgreen;
 
     &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__image--mobile {
+            max-width: 125%;
+            height: auto;
+            margin-bottom: 25px;
+        }
+
         &__image--desktop {
             display: none;
         }
