@@ -41,6 +41,7 @@ Users should be able to:
 -   Flexbox
 -   Mobile-first workflow
 -   SCSS (CSS preprocessor)
+-   Animate On Scroll Library - [AOS](https://github.com/michalsnik/aos)
 
 ## Author
 
