@@ -1,0 +1,353 @@
+header {
+    background: $redishBgGradient;
+    color: $white;
+    width: 100%;
+    height: 600px;
+
+    position: relative;
+    border-bottom-left-radius: 100px;
+    overflow: hidden;
+}
+
+.overlaytext {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 40px;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__left {
+            &__menu {
+                display: none;
+            }
+        }
+
+        &__right {
+            &__buttons {
+                display: none;
+            }
+        }
+    }
+
+    &__heading {
+        margin-top: 100px;
+        font-size: 36px;
+    }
+
+    &__motto {
+        margin-top: 20px;
+        font-size: 1.25rem;
+    }
+
+    &__buttons {
+        margin-top: 45px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+.overlayimg {
+    position: absolute;
+    top: 20%;
+    left: 42.5%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+        max-width: 400%;
+        height: auto;
+    }
+}
+
+.menu {
+    width: 90%;
+    // height: 80%;
+    background-color: $white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    box-shadow: rgba(0, 0, 0, 0.19) 0rem 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+    font-weight: 600;
+    font-size: 20px;
+    padding: 30px 0;
+
+    &.active {
+        opacity: 1;
+        top: 15%;
+        visibility: visible;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            width: 280px;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            p {
+                position: relative;
+
+                img {
+                    margin-left: 10px;
+                    transition: all 0.5s ease;
+
+                    &.active {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .product-menu {
+                background-color: $grayishBlue;
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                -moz-transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+
+                &.active {
+                    height: auto;
+                    visibility: visible;
+                    opacity: 0.7;
+                    margin-top: 10px;
+                    padding: 20px 0;
+                }
+            }
+
+            .company-menu {
+                background-color: $grayishBlue;
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                -moz-transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+
+                &.active {
+                    height: auto;
+                    visibility: visible;
+                    opacity: 0.7;
+                    margin-top: 10px;
+                    padding: 20px 0;
+                }
+            }
+
+            .connect-menu {
+                background-color: $grayishBlue;
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                -moz-transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+
+                &.active {
+                    height: auto;
+                    visibility: visible;
+                    opacity: 0.7;
+                    margin-top: 10px;
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+
+    .authentication {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 130px;
+        width: 90%;
+        border-top: 1px solid $grayishBlue;
+        margin-top: 20px;
+        padding-top: 20px;
+
+        a {
+            text-decoration: none;
+            color: $veryDarkBlackBlue;
+        }
+
+        button {
+            color: $white;
+            background: $redishBgGradient;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header {
+        height: 100vh;
+    }
+
+    .overlaytext {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__nav {
+            padding: 0 100px;
+
+            &__left {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 480px;
+
+                &__menu {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 320px;
+
+                    &__item {
+                        position: relative;
+                        padding: 10px 5px;
+
+                        &:hover {
+                            cursor: pointer;
+                            text-decoration: underline 2px solid;
+                        }
+
+                        .icon-arrow-desktop {
+                            margin-left: 10px;
+                            transition: all 0.2s ease;
+
+                            &.active {
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        &__submenu {
+                            position: absolute;
+                            top: 50%;
+                            left: -15%;
+                            text-align: left;
+                            background-color: $white;
+                            color: $veryDarkGrayishBlue;
+                            width: 140px;
+                            padding: 25px 20px;
+                            border-radius: 5px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all 0.2s ease;
+
+                            &.active {
+                                opacity: 1;
+                                visibility: visible;
+                                top: 100%;
+                            }
+
+                            &__item {
+                                a {
+                                    text-decoration: none;
+                                    color: inherit;
+                                }
+
+                                &:not(:last-child) {
+                                    margin-bottom: 10px;
+                                }
+
+                                &:hover {
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__right {
+                .icon-toggle {
+                    display: none;
+                }
+
+                &__buttons {
+                    display: block;
+                    width: 220px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .button-text {
+                        text-decoration: none;
+                        color: inherit;
+                        font-weight: 600;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            text-decoration: underline 2px solid;
+                        }
+                    }
+
+                    .button-cta {
+                        background-color: $white;
+                        color: $lightRed;
+                        border-radius: 25px;
+                        border: none;
+                        font-family: 'Ubuntu', sans-serif;
+                        font-weight: 700;
+                        font-size: 18px;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            background-color: $veryLightRed;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__heading {
+            font-size: 60px;
+        }
+
+        // &__motto {
+        // }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: center;
+            width: 325px;
+            margin-top: 50px;
+        }
+    }
+
+    .overlayimg {
+        top: -10%;
+        left: 30%;
+        &__image {
+            max-width: 400%;
+        }
+    }
+}

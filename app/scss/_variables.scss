@@ -1,0 +1,18 @@
+$lightRed: hsl(356, 100%, 66%); /* CTA Text */
+$veryLightRed: hsl(355, 100%, 74%); /* CTA Hover Background */
+$veryDarkBlue: hsl(208, 49%, 24%); /* Headings */
+$white: hsl(0, 0%, 100%); /* White */
+$grayishBlue: hsl(240, 2%, 79%); /* Footer Text */
+$veryDarkGrayishBlue: hsl(207, 13%, 34%); /* Body Copy */
+$veryDarkBlackBlue: hsl(240, 10%, 16%); /* Footer Background */
+
+$redishBgGradient: linear-gradient(
+    127deg,
+    rgba(255, 143, 112, 1) 0%,
+    rgba(255, 61, 84, 1) 75%
+);
+$blueishBgGradient: linear-gradient(
+    180deg,
+    rgba(44, 45, 63, 1) 0%,
+    rgba(63, 65, 100, 1) 75%
+);
